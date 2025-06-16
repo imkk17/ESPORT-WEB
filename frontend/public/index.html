@@ -1,151 +1,449 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="theme-color" content="#000000" />
-        <meta name="description" content="A product of emergent.sh" />
-        <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-        <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-        <title>Emergent | Fullstack App</title>
-    </head>
-    <body>
-        <noscript>You need to enable JavaScript to run this app.</noscript>
-        <div id="root"></div>
-        <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-        <a
-            id="emergent-badge"
-            target="_blank"
-            href="https://app.emergent.sh/?utm_source=emergent-badge"
-            style="
-                display: flex !important;
-                align-items: center !important;
-                position: fixed !important;
-                bottom: 20px;
-                right: 20px;
-                text-decoration: none;
-                padding: 6px 10px;
-                font-family: -apple-system, BlinkMacSystemFont,
-                    &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu, Cantarell,
-                    &quot;Open Sans&quot;, &quot;Helvetica Neue&quot;,
-                    sans-serif !important;
-                font-size: 12px !important;
-                z-index: 9999 !important;
-                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15) !important;
-                border-radius: 8px !important;
-                background-color: #ffffff !important;
-                border: 1px solid rgba(255, 255, 255, 0.25) !important;
-            "
-        >
-            <div
-                style="display: flex; flex-direction: row; align-items: center"
-            >
-                <img
-                    style="width: 20px; height: 20px; margin-right: 8px"
-                    src="https://avatars.githubusercontent.com/in/1201222?s=120&u=2686cf91179bbafbc7a71bfbc43004cf9ae1acea&v=4"
-                />
-                <p
-                    style="
-                        color: #000000;
-                        font-family: -apple-system, BlinkMacSystemFont,
-                            &quot;Segoe UI&quot;, Roboto, Oxygen, Ubuntu,
-                            Cantarell, &quot;Open Sans&quot;,
-                            &quot;Helvetica Neue&quot;, sans-serif !important;
-                        font-size: 12px !important;
-                        align-items: center;
-                        margin-bottom: 0;
-                    "
-                >
-                    Made with Emergent
-                </p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEX ARENA - Elite Competition Nexus</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle System -->
+    <div id="particles" class="particles"></div>
+    
+    <!-- Matrix Background -->
+    <div id="matrix-bg" class="matrix-bg"></div>
+    
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-container">
+            <div class="logo-section quantum-glow">
+                <div class="logo-wrapper">
+                    <div class="logo">
+                        <span class="logo-text">N</span>
+                    </div>
+                    <div class="logo-glow"></div>
+                </div>
+                <div class="brand-info">
+                    <h1 class="brand-name">NEX ARENA</h1>
+                    <p class="brand-tagline">ELITE COMPETITION NEXUS</p>
+                </div>
             </div>
-        </a>
-        <script>
-            !(function (t, e) {
-                var o, n, p, r;
-                e.__SV ||
-                    ((window.posthog = e),
-                    (e._i = []),
-                    (e.init = function (i, s, a) {
-                        function g(t, e) {
-                            var o = e.split(".");
-                            2 == o.length && ((t = t[o[0]]), (e = o[1])),
-                                (t[e] = function () {
-                                    t.push(
-                                        [e].concat(
-                                            Array.prototype.slice.call(
-                                                arguments,
-                                                0,
-                                            ),
-                                        ),
-                                    );
-                                });
-                        }
-                        ((p = t.createElement("script")).type =
-                            "text/javascript"),
-                            (p.crossOrigin = "anonymous"),
-                            (p.async = !0),
-                            (p.src =
-                                s.api_host.replace(
-                                    ".i.posthog.com",
-                                    "-assets.i.posthog.com",
-                                ) + "/static/array.js"),
-                            (r =
-                                t.getElementsByTagName(
-                                    "script",
-                                )[0]).parentNode.insertBefore(p, r);
-                        var u = e;
-                        for (
-                            void 0 !== a ? (u = e[a] = []) : (a = "posthog"),
-                                u.people = u.people || [],
-                                u.toString = function (t) {
-                                    var e = "posthog";
-                                    return (
-                                        "posthog" !== a && (e += "." + a),
-                                        t || (e += " (stub)"),
-                                        e
-                                    );
-                                },
-                                u.people.toString = function () {
-                                    return u.toString(1) + ".people (stub)";
-                                },
-                                o =
-                                    "init me ws ys ps bs capture je Di ks register register_once register_for_session unregister unregister_for_session Ps getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSurveysLoaded onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey canRenderSurveyAsync identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty Es $s createPersonProfile Is opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing Ss debug xs getPageViewId captureTraceFeedback captureTraceMetric".split(
-                                        " ",
-                                    ),
-                                n = 0;
-                            n < o.length;
-                            n++
-                        )
-                            g(u, o[n]);
-                        e._i.push([i, s, a]);
-                    }),
-                    (e.__SV = 1));
-            })(document, window.posthog || []);
-            posthog.init("phc_yJW1VjHGGwmCbbrtczfqqNxgBDbhlhOWcdzcIJEOTFE", {
-                api_host: "https://us.i.posthog.com",
-                person_profiles: "identified_only", // or 'always' to create profiles for anonymous users as well
-            });
-        </script>
-    </body>
+            
+            <nav class="nav-desktop">
+                <button class="nav-btn active" data-view="home">
+                    <span class="nav-icon">🏠</span>
+                    <span>Home</span>
+                </button>
+                <button class="nav-btn" data-view="tournaments">
+                    <span class="nav-icon">🏆</span>
+                    <span>Tournaments</span>
+                </button>
+                <button class="nav-btn" data-view="matches">
+                    <span class="nav-icon">⚔️</span>
+                    <span>Matches</span>
+                </button>
+                <button class="nav-btn" data-view="news">
+                    <span class="nav-icon">📰</span>
+                    <span>News</span>
+                </button>
+                <button class="nav-btn" data-view="players">
+                    <span class="nav-icon">👤</span>
+                    <span>Players</span>
+                </button>
+            </nav>
+            
+            <div class="header-actions">
+                <button class="cyber-button">SIGN IN</button>
+                <button class="mobile-menu-btn" id="mobile-menu-btn">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-content">
+                <button class="mobile-nav-btn active" data-view="home">
+                    <span class="nav-icon">🏠</span>
+                    <span>Home</span>
+                </button>
+                <button class="mobile-nav-btn" data-view="tournaments">
+                    <span class="nav-icon">🏆</span>
+                    <span>Tournaments</span>
+                </button>
+                <button class="mobile-nav-btn" data-view="matches">
+                    <span class="nav-icon">⚔️</span>
+                    <span>Matches</span>
+                </button>
+                <button class="mobile-nav-btn" data-view="news">
+                    <span class="nav-icon">📰</span>
+                    <span>News</span>
+                </button>
+                <button class="mobile-nav-btn" data-view="players">
+                    <span class="nav-icon">👤</span>
+                    <span>Players</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Home View -->
+        <div id="home-view" class="view active">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="hero-bg cyber-grid"></div>
+                <div class="hero-bg hex-pattern"></div>
+                <div class="hero-bg-gradient"></div>
+                <div class="hero-bg-image"></div>
+                
+                <!-- Neural Network Lines -->
+                <div class="neural-line neural-line-1"></div>
+                <div class="neural-line neural-line-2"></div>
+                
+                <div class="hero-content">
+                    <div class="hero-title quantum-glow">
+                        <h1 class="hero-main-title">
+                            <span class="title-line neon-text-blue">NEX</span>
+                            <span class="title-line neon-text-pink">ARENA</span>
+                            <span class="title-line neon-text-green">NEXUS</span>
+                        </h1>
+                    </div>
+                    
+                    <div class="hero-subtitle">
+                        <p class="hero-tagline">ENTER THE DIGITAL BATTLEFIELD</p>
+                        <p class="hero-description">
+                            Experience next-generation competitive gaming. Advanced tournament tracking, real-time match analysis, 
+                            and quantum-powered performance metrics in the ultimate esports command center.
+                        </p>
+                    </div>
+                    
+                    <div class="hero-actions">
+                        <button class="cyber-button hero-btn-primary">
+                            🚀 LAUNCH TOURNAMENT HUB
+                        </button>
+                        <button class="hero-btn-secondary">
+                            <span>⚡ WATCH LIVE BATTLES</span>
+                            <div class="btn-shine"></div>
+                        </button>
+                    </div>
+                    
+                    <!-- Stats Display -->
+                    <div class="hero-stats">
+                        <div class="stat-card holo-card">
+                            <div class="stat-value neon-text-blue">1,247</div>
+                            <div class="stat-label">ACTIVE TOURNAMENTS</div>
+                        </div>
+                        <div class="stat-card holo-card">
+                            <div class="stat-value neon-text-pink">89</div>
+                            <div class="stat-label">LIVE MATCHES</div>
+                        </div>
+                        <div class="stat-card holo-card">
+                            <div class="stat-value neon-text-green">15,634</div>
+                            <div class="stat-label">PRO PLAYERS</div>
+                        </div>
+                        <div class="stat-card holo-card">
+                            <div class="stat-value neon-text-yellow">$47M</div>
+                            <div class="stat-label">TOTAL PRIZE POOL</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="scroll-indicator">
+                    <div class="scroll-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                        </svg>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Featured Tournaments -->
+            <section class="section tournaments-section">
+                <div class="section-bg"></div>
+                <div class="section-bg cyber-grid"></div>
+                
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title neon-text-blue">FEATURED TOURNAMENTS</h2>
+                        <div class="section-divider"></div>
+                        <p class="section-subtitle">THE ULTIMATE DIGITAL BATTLEGROUNDS</p>
+                    </div>
+                    
+                    <div class="tournaments-grid" id="tournaments-grid">
+                        <!-- Tournament cards will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Live Battles -->
+            <section class="section matches-section">
+                <div class="section-bg"></div>
+                <div class="section-bg hex-pattern"></div>
+                
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title neon-text-pink">LIVE BATTLES</h2>
+                        <div class="section-divider pink"></div>
+                        <p class="section-subtitle">REAL-TIME COMBAT STATUS</p>
+                    </div>
+                    
+                    <div class="matches-list" id="matches-list">
+                        <!-- Match cards will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="section-footer">
+                        <button class="cyber-button">🎯 ACCESS ALL MATCHES</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Intel Feed -->
+            <section class="section news-section">
+                <div class="section-bg"></div>
+                <div class="section-bg cyber-grid"></div>
+                
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title neon-text-green">INTEL FEED</h2>
+                        <div class="section-divider green"></div>
+                        <p class="section-subtitle">LATEST BATTLEFIELD REPORTS</p>
+                    </div>
+                    
+                    <div class="news-grid" id="news-grid">
+                        <!-- News cards will be populated by JavaScript -->
+                    </div>
+                    
+                    <div class="section-footer">
+                        <button class="cyber-button">📡 ACCESS NEWS ARCHIVE</button>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Elite Legends -->
+            <section class="section players-section">
+                <div class="section-bg"></div>
+                <div class="section-bg hex-pattern"></div>
+                
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">
+                            <span class="neon-text-blue">ELITE</span>
+                            <span class="neon-text-pink">LEGENDS</span>
+                        </h2>
+                        <div class="section-divider yellow"></div>
+                        <p class="section-subtitle">CHAMPIONS OF THE DIGITAL REALM</p>
+                    </div>
+                    
+                    <div class="players-grid" id="players-grid">
+                        <!-- Player cards will be populated by JavaScript -->
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Other Views (Tournaments, Matches, News, Players) -->
+        <div id="tournaments-view" class="view">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-title neon-text-blue">TOURNAMENTS</h1>
+                    <div class="search-filters">
+                        <input type="text" id="tournament-search" placeholder="Search tournaments..." class="search-input">
+                        <select id="tournament-filter" class="filter-select">
+                            <option value="all">All Games</option>
+                            <option value="Valorant">Valorant</option>
+                            <option value="Counter-Strike 2">Counter-Strike 2</option>
+                            <option value="League of Legends">League of Legends</option>
+                            <option value="Dota 2">Dota 2</option>
+                            <option value="Rocket League">Rocket League</option>
+                            <option value="Overwatch 2">Overwatch 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="tournaments-grid" id="all-tournaments-grid">
+                    <!-- All tournaments will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div id="matches-view" class="view">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-title neon-text-pink">MATCHES</h1>
+                    <div class="search-filters">
+                        <input type="text" id="match-search" placeholder="Search matches..." class="search-input">
+                        <select id="match-filter" class="filter-select">
+                            <option value="all">All Games</option>
+                            <option value="Valorant">Valorant</option>
+                            <option value="Counter-Strike 2">Counter-Strike 2</option>
+                            <option value="League of Legends">League of Legends</option>
+                            <option value="Dota 2">Dota 2</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="matches-list" id="all-matches-list">
+                    <!-- All matches will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div id="news-view" class="view">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-title neon-text-green">NEWS</h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="news-grid large" id="all-news-grid">
+                    <!-- All news will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+        
+        <div id="players-view" class="view">
+            <div class="page-header">
+                <div class="container">
+                    <h1 class="page-title">
+                        <span class="neon-text-blue">ELITE</span>
+                        <span class="neon-text-pink">LEGENDS</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="container">
+                <div class="players-grid" id="all-players-grid">
+                    <!-- All players will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-bg"></div>
+        <div class="footer-bg cyber-grid"></div>
+        
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo quantum-glow">
+                        <div class="logo-wrapper">
+                            <div class="logo">
+                                <span class="logo-text">N</span>
+                            </div>
+                            <div class="logo-glow"></div>
+                        </div>
+                        <div class="brand-info">
+                            <h3 class="brand-name">NEX ARENA</h3>
+                            <p class="brand-tagline">ELITE COMPETITION NEXUS</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        The ultimate neural interface for esports consciousness. Connect to tournaments, 
+                        analyze quantum battle metrics, and interface with the global gaming matrix.
+                    </p>
+                    <div class="social-links">
+                        <button class="social-btn">🐦</button>
+                        <button class="social-btn">💬</button>
+                        <button class="social-btn">📺</button>
+                        <button class="social-btn">🎮</button>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading neon-text-pink">NEURAL LINKS</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">TOURNAMENTS</a></li>
+                        <li><a href="#" class="footer-link">MATCHES</a></li>
+                        <li><a href="#" class="footer-link">PLAYERS</a></li>
+                        <li><a href="#" class="footer-link">TEAMS</a></li>
+                        <li><a href="#" class="footer-link">RANKINGS</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-heading neon-text-green">SUPPORT MATRIX</h4>
+                    <ul>
+                        <li><a href="#" class="footer-link">HELP CENTER</a></li>
+                        <li><a href="#" class="footer-link">CONTACT</a></li>
+                        <li><a href="#" class="footer-link">PRIVACY</a></li>
+                        <li><a href="#" class="footer-link">TERMS</a></li>
+                        <li><a href="#" class="footer-link">API ACCESS</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 NEX ARENA NEXUS. ALL QUANTUM RIGHTS RESERVED.</p>
+                <div class="system-status">
+                    <span class="status-text">⚡ SYSTEM STATUS: ONLINE</span>
+                    <div class="status-indicator"></div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Modals -->
+    <div id="tournament-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content holo-card">
+            <div class="modal-header">
+                <img id="modal-tournament-image" src="" alt="" class="modal-image">
+                <button class="modal-close" id="close-tournament-modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+                <div class="modal-header-content">
+                    <h2 id="modal-tournament-title" class="modal-title neon-text-blue"></h2>
+                    <span id="modal-tournament-status" class="tournament-status"></span>
+                </div>
+            </div>
+            <div class="modal-body">
+                <p id="modal-tournament-description" class="modal-description"></p>
+                <div class="modal-info-grid" id="modal-tournament-info">
+                    <!-- Tournament info will be populated by JavaScript -->
+                </div>
+                <div class="modal-actions">
+                    <button class="cyber-button">🎯 TRACK TOURNAMENT</button>
+                    <button class="glass-cyber">📊 VIEW BRACKET</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="match-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content holo-card">
+            <div class="modal-header-simple">
+                <h2 class="modal-title neon-text-pink">BATTLE ANALYSIS</h2>
+                <button class="modal-close" id="close-match-modal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="match-analysis" id="match-analysis">
+                    <!-- Match analysis will be populated by JavaScript -->
+                </div>
+                <div class="modal-info-grid" id="modal-match-info">
+                    <!-- Match info will be populated by JavaScript -->
+                </div>
+                <div class="modal-actions" id="modal-match-actions">
+                    <!-- Match actions will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
 </html>
