@@ -107,12 +107,12 @@ const Header = ({ currentView, setCurrentView }) => {
           <div className="flex items-center space-x-4 quantum-glow">
             <div className="relative">
               <div className="w-14 h-14 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-2xl flex items-center justify-center border border-cyan-400/50 shadow-lg shadow-cyan-500/25">
-                <span className="text-white font-black text-2xl neon-text-blue cyber-font">E</span>
+                <span className="text-white font-black text-2xl neon-text-blue cyber-font">N</span>
               </div>
               <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-2xl blur opacity-30 animate-pulse"></div>
             </div>
             <div>
-              <h1 className="text-2xl font-black neon-text-blue cyber-font">ESPORTSHUB</h1>
+              <h1 className="text-2xl font-black neon-text-blue cyber-font">NEX ARENA</h1>
               <p className="text-xs text-cyan-300 cyber-font opacity-80">ELITE COMPETITION NEXUS</p>
             </div>
           </div>
@@ -208,8 +208,8 @@ const Hero = () => {
       <div className="relative z-10 text-center max-w-6xl mx-auto px-4">
         <div className="mb-8 quantum-glow">
           <h1 className="text-8xl md:text-9xl font-black leading-none mb-4">
-            <span className="block neon-text-blue cyber-font">ELITE</span>
-            <span className="block neon-text-pink cyber-font text-6xl md:text-7xl">ESPORTS</span>
+            <span className="block neon-text-blue cyber-font">NEX</span>
+            <span className="block neon-text-pink cyber-font text-6xl md:text-7xl">ARENA</span>
             <span className="block neon-text-green cyber-font text-5xl md:text-6xl">NEXUS</span>
           </h1>
         </div>
@@ -623,12 +623,12 @@ const Footer = () => {
             <div className="flex items-center space-x-4 mb-6 quantum-glow">
               <div className="relative">
                 <div className="w-16 h-16 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-3xl flex items-center justify-center border border-cyan-400/50">
-                  <span className="text-white font-black text-3xl neon-text-blue cyber-font">E</span>
+                  <span className="text-white font-black text-3xl neon-text-blue cyber-font">N</span>
                 </div>
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-3xl blur opacity-30"></div>
               </div>
               <div>
-                <h3 className="text-3xl font-black neon-text-blue cyber-font">ESPORTSHUB</h3>
+                <h3 className="text-3xl font-black neon-text-blue cyber-font">NEX ARENA</h3>
                 <p className="text-sm text-cyan-300 cyber-font">ELITE COMPETITION NEXUS</p>
               </div>
             </div>
@@ -684,7 +684,7 @@ const Footer = () => {
         <div className="border-t border-cyan-500/30 pt-10">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm cyber-font">
-              © 2025 ESPORTSHUB NEXUS. ALL QUANTUM RIGHTS RESERVED.
+              © 2025 NEX ARENA NEXUS. ALL QUANTUM RIGHTS RESERVED.
             </p>
             <div className="flex items-center space-x-4 mt-4 md:mt-0">
               <span className="text-green-400 text-sm cyber-font">⚡ SYSTEM STATUS: ONLINE</span>
